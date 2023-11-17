@@ -25,7 +25,6 @@ function printError(error, titleQuery) {
   console.log(error);
 }
 
-
 function handleForm(e) {
   e.preventDefault();
   document.querySelector('#movieInput').innerText = null;
