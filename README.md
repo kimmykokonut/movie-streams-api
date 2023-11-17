@@ -1,15 +1,14 @@
-# (Application Name)
+# Movie of the Night API 
 
-#### (Brief Description of Application)
+#### Practicing api calls using async/await and api call with header
 
-#### By Grant Abel
+#### By Grant Abel & Kim Robinson & Brianca Knight
 
 ## Technologies Used
 
 * JavaScript
 * CSS
 * Bootstrap
-* Jest
 * Babel
 * JSON
 * webpack
@@ -29,8 +28,7 @@
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* WIP-api call successful but bug if movie does not have a streaming option or price
 
 ## License
 
