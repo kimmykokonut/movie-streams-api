@@ -11,7 +11,9 @@ export default class FindShow {
 
     try {
       const response = await fetch(url, options);
+      console.log(response);
       const jsonifyResponse = await response.json();
+      console.log(jsonifyResponse);
       if (!response.ok) {
         const errorMsg = `${response.status} ${response.statusText} ${jsonifyResponse.message}`;
         throw new Error(errorMsg);
