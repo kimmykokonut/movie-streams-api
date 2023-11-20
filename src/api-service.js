@@ -11,9 +11,7 @@ export default class FindShow {
 
     try {
       const response = await fetch(url, options);
-      console.log(response);
       const jsonifyResponse = await response.json();
-      console.log(jsonifyResponse);
       if (jsonifyResponse.result.length === 0) {
         const errorMsg = `NOT FOUND: Not a movie title`;
         throw new Error(errorMsg);

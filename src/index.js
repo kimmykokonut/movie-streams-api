@@ -11,22 +11,26 @@ async function getStreamInfo(titleQuery) {
     printError(response, titleQuery);
   }
 }
-
 //UI
 function printElements(response, titleQuery) {
   const responseDiv = document.querySelector('#result');
   responseDiv.innerHTML = '';
   const h3 = document.createElement('h3');
   h3.innerText = `Results for ${titleQuery}: `;
-  responseDiv.append(h3);
-  
-  const p = document.createElement('p');
-  responseDiv.append(p);
-  p.innerText = `Search term: ${titleQuery}, 
-  Title found: ${response.result[0].title}; 
-  Streaming option: ${response.result[0].streamingInfo.us[0].service}, 
-  Streaming type: ${response.result[0].streamingInfo.us[0].streamingType}, 
-  Price: $${response.result[0].streamingInfo.us[0].price.amount}`; //some things don't have a price and it errors.
+
+  const listResults = document.createElement('ul');
+
+  const resultsArray = response.result;
+  console.log(resultsArray);
+  resultsArray.forEach((result) => {
+    console.log(result);
+    const listItem = document.createElement('li');
+    listItem.innerText = `Title: ${result.title},
+    Year: ${result.year},
+    Type: ${result.type}`;
+    listResults.append(listItem);
+  });
+  responseDiv.append(h3, listResults);
 }
 
 function printError(error, titleQuery) {
