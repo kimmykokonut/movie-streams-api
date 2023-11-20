@@ -29,6 +29,9 @@
 ## Known Bugs
 
 * WIP-api call successful but bug if movie does not have a streaming option or price
+* bug if poor input, gets 200OK and fails at response.title[0] because it's an empty array. unsure how to get it to error correctly.
+* want to print list of top 5 results-challenge getting labelling of array to append as list items
+* (Error successful for bad api. and url typo) Error fail for 404
 
 ## License
 

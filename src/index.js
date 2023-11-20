@@ -19,8 +19,6 @@ function printElements(response, titleQuery) {
   const h3 = document.createElement('h3');
   h3.innerText = `Results for ${titleQuery}: `;
   responseDiv.append(h3);
-  const results = response.result;
-  console.log(results);
   
   const p = document.createElement('p');
   responseDiv.append(p);
@@ -33,7 +31,6 @@ function printElements(response, titleQuery) {
 
 function printError(error, titleQuery) {
   document.querySelector('#result').innerText = `Error for ${titleQuery}: ${error.message}`;
-  console.log(error);
 }
 
 function handleForm(e) {
